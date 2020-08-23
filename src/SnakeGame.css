@@ -1,0 +1,20 @@
+.Board {
+  display: flex;
+  /* border: 1px solid white; */
+  width: 500px;
+  margin: 0 auto;
+}
+
+.Square {
+  width: 25px;
+  height: 25px;
+  border: 1px solid white;
+}
+
+.Square-Head {
+  background-color: red;
+}
+
+.Square-Tail {
+  background-color: rgb(255, 123, 0);
+}
