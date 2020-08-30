@@ -4,3 +4,8 @@
   min-height: 100vh;
   color: white;
 }
+
+.Title {
+  margin: 0;
+  padding: 10px;
+}

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useDirection, Direction} from './useDirection';
 import './SnakeGame.css';
 
 // think of array structure
@@ -8,22 +9,12 @@ import './SnakeGame.css';
 const BOARD_WIDTH = 20;
 const BOARD_HEIGHT = 20;
 
-const Direction = {
-  Up: 'Up',
-  Down: 'Down',
-  Left: 'Left',
-  Right: 'Right',
-} as const;
-
-type Direction = typeof Direction[keyof typeof Direction];
-
 export default function SnakeGame() {
   const [snake, setSnake] = useState([
     [9, 10],
     [8, 10],
   ]);
-
-  const [direction, setDirection] = useState<Direction>(Direction.Right);
+  const {direction, setDirection} = useDirection();
 
   function moveSnake() {
     const newSnake = [...snake];
